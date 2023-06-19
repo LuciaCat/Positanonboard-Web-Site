@@ -1,0 +1,117 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem 3rem 4rem;
+    margin-bottom: 1rem;
+    font-size: .875rem;
+    background: radial-gradient( #0ed2f7, #b2fefa,aliceblue, aliceblue);
+    
+}
+
+.header img{
+    width: 150%;
+    height:150%;
+    object-fit: contain;
+}
+
+button {
+    margin: 1.25rem;
+  }
+  .custom-discover-btn {
+    width: 8.125rem;
+    height: 2.5rem;
+    color:black;
+    border-radius: .3125rem;
+    padding: .625rem 1.5625rem;
+    font-family: 'Playfair Display', serif;
+    font-size: .575rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset .125rem .125rem .125rem 0 rgba(255,255,255,.5),
+     .4375rem .4375rem 1.25rem 0 rgba(0,0,0,.1),
+     .25rem .25rem .3125rem 0 rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .btn-discover {
+    background: #4dccc6;
+    background: linear-gradient(315deg, #1a8cb8 0%, #96e4df 74%);
+    border: none;
+    
+  }
+  .btn-discover:before {
+    height: 0%;
+    width: .125rem;
+  }
+  .btn-discover:hover {
+    box-shadow: .25rem .25rem .375rem 0 rgba(255,255,255,.5),
+                -0.25rem -0.25rem .375rem 0 rgba(116, 125, 136, .5), 
+                inset -0.25rem -0.25rem .375rem 0 rgba(255,255,255,.2),
+                inset .25rem .25rem .375rem 0 rgba(0, 0, 0, .4);
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.7rem 4rem;
+    
+    }
+
+    .header img{
+        width: auto;
+        height: auto;
+        object-fit:none;
+    }
+    
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.7rem 4rem;
+    
+    }
+
+    .header img{
+        width: auto;
+        height: auto;
+        object-fit:none;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.7rem 4rem;
+    
+    }
+
+    .header img{
+        width: auto;
+        height: auto;
+        object-fit:none;
+    }
+    
+}
+
+
+

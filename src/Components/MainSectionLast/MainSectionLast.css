@@ -1,0 +1,35 @@
+.lastSection img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.positanoPhoto{
+    padding-bottom: -1rem;
+}
+
+.positanoPhoto p{
+    font-size: 0.4rem;
+ 
+}
+
+.positanoPhoto{
+    /* float: left; */
+    position: relative;
+    overflow: hidden;
+}
+
+.positanoPhoto p{
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    background: none repeat scroll 0 0 rgba(170, 170, 170, 0.7); 
+    color: #1d1f1b; 
+    display: none; 
+    font-weight: 700;
+    width: 100%; 
+    /* padding: .625rem;  */
+}
+
+.positanoPhoto:hover p{
+    display: block;
+}
