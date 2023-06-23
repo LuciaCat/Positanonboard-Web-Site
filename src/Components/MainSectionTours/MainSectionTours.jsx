@@ -3,21 +3,22 @@ import Button from "../Button/Button";
 import React, { useState, useRef } from "react";
 
 function Tours() {
-  const [showDetails1, setShowDetails1] = useState(false);
-  const [showDetails2, setShowDetails2] = useState(false);
-  const cardRef1 = useRef(null);
-  const cardRef2 = useRef(null);
+  const [showDetails1, setShowDetails1] = useState(false); //read more prima card, gli do di default il read more chiuso e quindi in false
+  const [showDetails2, setShowDetails2] = useState(false); //read more seconda card, gli do di default il read more chiuso e quindi in false
+  const cardRef1 = useRef(null); //controllo del readmore della prima card
+  const cardRef2 = useRef(null); //controllo del readmore della prima card
 
-  function handleClick1() {
-    if (!showDetails2) {
+  //readmore della prima
+  function handleClick1() {//gli imposto l'apertura del primo readmore, se è false imposto su true e apro il read more e viceversa e ho impostato che se il readmore della prima card è in true, e quindi aperto, allora all'apertura di questo il rpimo si chiude e viceversa.
+    if (!showDetails2) { 
       setShowDetails1(!showDetails1);
     } else {
       setShowDetails1(true);
     }
     setShowDetails2(false);
   }
-
-  function handleClick2() {
+    //readmore della prima
+  function handleClick2() { //gli imposto l'apertura del secondo readmore, se è false imposto su true e apro il read more e viceversa e ho impostato che se il readmore della prima card è in true, e quindi aperto, allora all'apertura di questo il rpimo si chiude e viceversa.
     if (!showDetails1) {
       setShowDetails2(!showDetails2);
     } else {
@@ -26,6 +27,7 @@ function Tours() {
     setShowDetails1(false);
   }
 
+  /*qui controllo alla chiusura del read more che il focus ritorni alla card interessata, cambia in base al div padre  */
   function handleClick3() {
     setShowDetails1(false);
     setShowDetails2(false);
@@ -43,7 +45,7 @@ function Tours() {
         <h2>Private Tours</h2>
         <div className="allcards">
           <div className="cardContener">
-            <div className="card first-card" ref={cardRef1}>
+            <div className="card first-card" ref={cardRef1}> {/* qui inserisco le const che controllano il focus, ossia torna qui quando clicco su read less, uguale nella seconda card*/}
               <div className="card-image">
                 <img src="../Assets/positanocard.svg" alt="positano" />
               </div>
@@ -59,11 +61,11 @@ function Tours() {
                     opportunity to explore the stunning coastline, hidden coves,
                     and crystal-clear waters of this picturesque region of
                     Italy.{" "}
-                    <a className="readmore" onClick={handleClick1}>
+                    <a className="readmore" onClick={handleClick1}> {/*qui inserisco il primo readmore che al click controlla la funzione dell'handleClick1, uguale nella seconda card */}
                       Read More
                     </a>
-                  </p>
-                  {showDetails1 && (
+                  </p>{/*qui controllo il div del read more, cliccando il readmore si espande questo div contenente il mio paragrafo, uguale nella seconda card */}
+                  {showDetails1 && ( 
                     <div className="card-details card-back">
                       <p>
                         Nello, our experienced skipper and a true local of the
